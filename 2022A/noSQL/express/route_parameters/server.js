@@ -1,6 +1,22 @@
 const express = require('express');
 const app     = express();
 
+app.use(express.json());
+
+app.post('/', (req, res) => {
+
+    //console.log(req.body);
+
+    const {name, age} = req.body;
+    
+    res.status(200).json({
+        status: 'sussess',
+        name,
+        age,
+        message: 'Hello World by POST'
+    });
+});
+
 app.get('/', (req, res) => {
     res.status(200).json({
         status: 'sussess',
