@@ -8,6 +8,9 @@ async function run() {
         name: 'Caneta Bic Vermelha',
         price: 12.3
     });
+
+    product.consoleLog();
+    
     await product.save().then(() => console.log('New product saved'));
 
     mongoose.connection.close();

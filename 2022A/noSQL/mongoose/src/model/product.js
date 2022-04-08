@@ -9,4 +9,8 @@ const productShema = new mongoose.Schema({
     }
 });
 
+productShema.methods.consoleLog = () => {
+    console.log('LOG: Product');
+}
+
 module.exports = mongoose.model('Product', productShema);
